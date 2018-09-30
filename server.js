@@ -9,7 +9,7 @@ const path = require('path');
 //====================================================
 
 //Provides access to public folder
-app.use(express.static('public'));
+app.use(express.static("public"));
 
 //Parses application
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -23,6 +23,7 @@ app.use(bodyParser.json())
 
 // app.get('/', (req, res) => res.send('Hello World!'))
 require('./app/routing/html-routes.js')(app);
+require('./app/routing/api-routes.js')(app);
 
 //APP LISTENING
 //====================================================
