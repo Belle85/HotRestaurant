@@ -1,8 +1,11 @@
 const express = require('express');
-const bodyParser = require('body-parser')
-
-//Starts an instance of express
+const bodyParser = require('body-parser');
 const app = express();
+const PORT = process.env.PORT || 3000;
+
+
+//MIDDLEWARE
+//====================================================
 
 //Provides access to public folder
 app.use(express.static('public'));
@@ -11,12 +14,21 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
  
-app.use(function (req, res) {
-  res.setHeader('Content-Type', 'text/plain')
-  res.write('you posted:\n')
-  res.end(JSON.stringify(req.body, null, 2))
-});
+// app.use(function (req, res) {
+//   res.setHeader('Content-Type', 'text/plain')
+//   res.write('you posted:\n')
+//   res.end(JSON.stringify(req.body, null, 2))
+// });
 
-app.listen(3000, function(){
+//ROUTES
+//====================================================
+
+
+app.get('/', (req, res) => res.send('Hello World!'))
+
+
+//APP LISTENING
+//====================================================
+app.listen(process.env.PORT || 3000, function(){
     console.log('My app is listening on PORT 3000.')
-})
+});
