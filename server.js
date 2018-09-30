@@ -9,7 +9,7 @@ const path = require('path');
 //====================================================
 
 //Provides access to public folder
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname,"public")));
 
 //Parses application
 app.use(bodyParser.urlencoded({ extended: false }))
