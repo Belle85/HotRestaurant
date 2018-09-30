@@ -22,8 +22,8 @@ app.use(bodyParser.json())
 
 
 // app.get('/', (req, res) => res.send('Hello World!'))
-require('./app/routing/html-routes.js')(app);
-require('./app/routing/api-routes.js')(app);
+require('./routing/html-routes.js')(app);
+require('./routing/api-routes.js')(app);
 
 //APP LISTENING
 //====================================================
