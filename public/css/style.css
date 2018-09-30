@@ -7,7 +7,7 @@ body{
     opacity: 0.9;
     margin: auto;
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom:60px;
 
 }
 
@@ -15,9 +15,26 @@ footer{
     width:100%;
     margin:auto;
     text-align: center;
+    margin-top:10px;
 }
+
+
 
 #submitResa{
     margin:25px;
+
+}
+
+.alert{
+    opacity:0.9;
+}
+
+h4{
+    padding:10px;
+}
+
+.panel-heading,
+#panel-heading{
+    margin-bottom:10px;
 }
 

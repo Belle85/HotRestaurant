@@ -34,8 +34,8 @@
 
         <!-- Current Tables in Use -->
         <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">Current Reservations</h4>
+          <div class="panel-heading text-center">
+            <h1><span class="badge badge-pill badge-success ">Current Reservations</span></h1>
           </div>
           <div class="panel-body" id="tableSection">
           </div>
@@ -43,8 +43,8 @@
 
         <!-- Waiting List Panel -->
         <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">Waiting List</h4>
+          <div class="panel-heading text-center">
+            <<h1><span class="badge badge-pill badge-danger">Waiting List</span></h1>
           </div>
           <div class="panel-body" id="waitlistSection">
           </div>
@@ -92,7 +92,7 @@
 
           // Create the HTML Well (Section) and Add the table content for each reserved table
             var tableSection = $("<div>");
-            tableSection.addClass("well");
+            tableSection.addClass("card text-black bg-light mb-3");
             tableSection.attr("id", "tableWell-" + i + 1);
             $("#tableSection").append(tableSection);
 
@@ -100,7 +100,7 @@
 
 
             // Then display the remaining fields in the HTML (Section Name, Date, URL)
-            $("#tableWell-" + i + 1).append("<h2><span class='label label-primary'>" + tableNumber + "</span> | " + tableData[i].customerID + "</h2>");
+            $("#tableWell-" + i + 1).append("<h4><span class='label label-success'>" + tableNumber + "</span> | " + tableData[i].customerID + "</h4>");
           }
         });
     }
@@ -131,14 +131,14 @@
 
           // Create the HTML Well (Section) and Add the table content for each reserved table
             var waitlistSection = $("<div>");
-            waitlistSection.addClass("well");
+            waitlistSection.addClass("card text-black bg-light mb-3");
             waitlistSection.attr("id", "waitlistWell-" + i + 1);
             $("#waitlistSection").append(waitlistSection);
 
             var tableNumber = i + 1;
 
             // Then display the remaining fields in the HTML (Section Name, Date, URL)
-            $("#waitlistWell-" + i + 1).append("<h2><span class='label label-primary'>" + tableNumber + "</span> | " + waitlistData[i].customerID + "</h2>");
+            $("#waitlistWell-" + i + 1).append("<h4><span class='label label-success'>"+ tableNumber + "</span> | " + waitlistData[i].customerID + "</h4>");
           }
         });
     }
